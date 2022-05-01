@@ -1,0 +1,195 @@
+@import "./webfontkit/stylesheet.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: 'minecraftmedium';
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.home{
+    position: absolute;
+    width: 85%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url(./img/ground.jpg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* transition: all ease-in-out 1s; */
+}
+
+.logo {
+    width: 20rem;
+    height: 10rem;
+    background: url(./img/Minecraft-Logo.png) center center/cover;
+}
+
+.btn-start {
+    padding: 0.5rem 3rem;
+    font-family: 'minecraftmedium';
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.tools-container {
+    height: 100%;
+    width: 15%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tool {
+    width: 4rem;
+    height: 4rem;
+    color: #ccc;
+    border: #ccc 3px solid;
+    margin: 1rem;
+    padding: 1rem 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+.inventory {
+    margin: 1rem;
+    width: 3rem;
+    height: 3rem;
+    border: #ccc 3px solid;
+    cursor: pointer;
+}
+
+.reset-btn {
+    color: white;
+    padding: 1rem 2rem;
+    border: #ccc 3px solid;
+    margin: 3rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.reset-btn:hover {
+    color: black;
+    background: white;
+}
+
+.game-board-container {
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    background-color: #ccc;
+}
+
+.game-board {
+    width: 100vmin;
+    height: 100vmin;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+}
+
+.cell {
+    background-color: #0080FF;
+}
+
+.cell:hover {
+    border: 1px white solid;
+}
+
+
+
+.cloud {
+    background-color: white;
+}
+
+.grass {
+    background: url(./img/leafs.jpg) center center/cover;
+}
+
+.rock {
+    background: url(./img/stone.jpg) center center/cover;
+}
+
+
+.leaves {
+    background-color: lightgreen;
+    background: url(./img/leafs.jpg) center center/cover;
+}
+
+.trunk {
+    background: url(./img/tree\ trunk.png) center center/cover;
+}
+
+.dirt {
+    background: url(./img/ground.jpg) center center/cover;
+}
+
+.pickaxe {
+    background: url(./img/Pickaxe.png) center center/cover;
+    /* filter: opacity(0.8) drop-shadow(0 0 0 black); */
+}
+/* .pickaxe img {
+    width: 100%;
+    height: 100%;
+} */
+
+.axe {
+    background: url(./img/axe.png) center center/cover;
+}
+
+.shovel {
+    background: url(./img/shoval.jpg) center center/cover;
+}
+
+.error {
+    border-color: red !important;
+}
+
+@media(max-width: 1200px) {
+
+    html {
+        font-size: 10px
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .tools-container {
+        height: 10%;
+        width: 100%;
+        flex-direction: row;
+    }
+
+    .home {
+        width: 100%;
+        height: 90%;
+    }
+
+    .game-board-container {
+        width: 100%;
+        height: 90%;
+        align-items: center;
+    }
+
+    .game-board {
+        height: 100vmin;
+        width: 100vmin;
+    }
+}
